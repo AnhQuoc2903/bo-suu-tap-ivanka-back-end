@@ -12,9 +12,9 @@ class ImageService {
 
     const page = Math.max(1, Number.isSafeInteger(parsedPage) ? parsedPage : 1);
 
-    const limit = Math.min(
-      50,
-      Math.max(1, Number.isSafeInteger(parsedLimit) ? parsedLimit : 9),
+    const limit = Math.max(
+      1,
+      Number.isSafeInteger(parsedLimit) ? parsedLimit : 9,
     );
 
     if (category && category !== "all") {
